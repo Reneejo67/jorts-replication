@@ -1,9 +1,12 @@
 library(data.table)
 library(did2s)
 library(HonestDiD)
+add_el <- theme_grey() + theme(text = element_text(family = "Times", size=20))
+theme_set(add_el)
+
 getAnywhere(honest_did_did2s)
 cls = c(id="factor", X='vector', G2='numeric', G='factor',  Y='numeric', period= 'numeric', treat= 'factor', ts='numeric')
-data = read.table('~/jorts_replication/data/all_jorts_did_data_test_all_periods.tsv', stringsAsFactors = FALSE, sep = '\t', header = TRUE, colClasses=cls)
+data = read.table('~/jorts_replication/data/all_jorts_did_data_test_all_new_denom.tsv', stringsAsFactors = FALSE, sep = '\t', header = TRUE, colClasses=cls)
 mtx = matrix(, nrow=dim(data)[1], ncol=16)
 for (r in 1:dim(data)[1]) {
   vect = data$X[r]
