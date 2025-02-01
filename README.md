@@ -7,7 +7,9 @@ The full dataset consists of the time-bounded follower counts, and their associa
 
 ## Contents (code)
 - `{jkr, jorts}_data_parsing_interpolation_clean.ipynb`: iPython notebooks containing the data parsing and interpolation functionality for each attention broker case. Each notebook also includes a pre-trends analysis and produces the .tsv of data required for the differences-in-differences event study.
+- `{jkr, jorts}_population_estimate_data_prep.ipynb`: iPython notebooks containing data parsing functionality to construct .txt files of mark/recapture events in a suitable format for Project MARK R software to use. We use Project MARK to obtain estimates of the "eligible follower" and "eligible non-follower" populations using the Jolly-Seber mark-recapture population estimator. 
 - `jorts_utils.py`: Python file containing utility functions for data parsing and interpolation.
+- `mark_estimation.R`: R file that runs the POPAN implementation of the Jolly-Seber mark-recapture population estimator. 
 - `{jkr, jorts}_did.R`: R file that runs the differences-in-differences event studies for each attention broker case and plots the results.
 - `triad_closure.py`: Python script demonstrating the time-bounded following event collection procedure
 
