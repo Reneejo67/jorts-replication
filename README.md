@@ -13,8 +13,13 @@ The full dataset consists of the time-bounded follower counts, and their associa
 - `{jkr, jorts}_did.R`: R file that runs the differences-in-differences event studies for each attention broker case and plots the results.
 - `triad_closure.py`: Python script demonstrating the time-bounded following event collection procedure
 
-## Contents (data):
-The dataset is being uploaded to the Harvard Dataverse (TODO: add DOI)
+## Data:
+The replication data can be accessed at SOMAR (the Social Media Archive at ICPSR) [here](https://socialmediaarchive.org/record/65). 
+
+You can cite it as follows:
+
+Smith, Alyssa, Green, Jonathan, Foucault Welles, Brooke, and Lazer, David. Replication data for "Emergent structures of attention on social media are driven by amplification and triad transitivity." Inter-university Consortium for Political and Social Research [distributor], 2025-03-28. https://doi.org/10.3886/3swn-td91
+
 For best results, place the data in a directory at this level labeled `data`.
 - `all_{jkr, jorts}_did_data_test_all.tsv`: TSV containing the interpolated per-account per-day follower accumulation for known followers & non-followers of each attention broker.
 - `HASHED_jkr_followers_full_past_20180615.json`: json object mapping all of J.K. Rowling's followers accumulated after June 15, 2018 to a cursor timestamp bounding the time at which the following event occurred. Each follower's user ID is hashed using SHA256 for privacy.
